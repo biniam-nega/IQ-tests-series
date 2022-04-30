@@ -1,0 +1,13 @@
+@font-face {
+    font-family: 'sss';
+    src: url('../fonts/sss.ttf');
+}
+
+#logo {
+    font-family: 'sss';
+    font-size: 5em;
+}
+
+a {
+    width: 250px;
+}

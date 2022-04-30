@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../w3/w3.css" />
+    <link rel="stylesheet" href="css/game.css" />
+    <script src="../../jQuery/jquery-3.5.1.js"></script>
+    <script src="js/game.js"></script>
+</head>
+
+<body>
+
+    <div class="w3-top">
+        <div class="w3-bar w3-white w3-card w3-left-align w3-large">
+            <a href="index.html" class="w3-bar-item w3-button w3-padding-large w3-white">
+                <img src="multimedia/img/Home.png" width="30" height="30">
+            </a>
+            <div id="lives" class="w3-bar-item w3-right w3-margin-right"></div>
+        </div>
+    </div>
+
+    <div class="w3-center">
+        <div class="w3-margin-left w3-margin-right w3-padding-top-64">
+            <p class="w3-right w3-sand w3-border w3-round-xlarge w3-large w3-wide"><img
+                    src="multimedia/img/ic_coins_l.png" /> <span id="score"></span></p>
+        </div>
+    </div>
+
+    <div class="w3-padding-bottom-64">
+        <div class="w3-margin-left w3-margin-right w3-padding-top-64">
+            <h1 id="level" class="w3-center w3-wide w3-animate-top"></h1>
+        </div>
+
+        <div id="game-area" class="w3-margin-top w3-center w3-margin-bottom c-num-5">
+            <div id="q1">
+                <div id="c-num-5">
+                    <h3>Which set of symbols should replace the question marks?</h3>
+                    <img src="multimedia/img/questions/q-1/question1.PNG" width="300" />
+                    <br /><br />
+                    <img src="multimedia/img/questions/q-1/question2.PNG" width="300" />
+                    <hr />
+                    <div id="c1" class="w3-hover-sepia">
+                        A. <img src="multimedia/img/questions/q-1/c1.PNG" width="300" />
+                    </div>
+                    <div id="c2" class="w3-hover-sepia">
+                        B. <img src="multimedia/img/questions/q-1/c2.PNG" width="300" />
+                    </div>
+                    <div id="c3" class="w3-hover-sepia">
+                        C. <img src="multimedia/img/questions/q-1/c3.PNG" width="300" />
+                    </div>
+                    <div id="c4" class="w3-hover-sepia">
+                        D. <img src="multimedia/img/questions/q-1/c4.PNG" width="300" />
+                    </div>
+                    <div id="c5" class="w3-hover-sepia">
+                        E. <img src="multimedia/img/questions/q-1/c5.PNG" width="300" />
+                    </div>
+                </div>
+            </div>
+
+            <div id="q2">
+                <h3>Which two numbers should replace the question marks?</h3>
+                <h4 class="w3-padding-64">
+                    19, 20, 21, <input type="number" class="w3-center" id="ans1" placeholder="?" style="width:40px" maxlength="2" />,
+                    <input type="number" class="w3-center" id="ans2" placeholder="?" style="width:40px" maxlength="2" />, 26, 28, 32, 33,
+                    40
+                </h4>
+                <input type="button" class="w3-button w3-center w3-teal w3-margin-bottom w3-disabled" value="submit"
+                    id="submit" />
+            </div>
+
+            <div id="q3">
+               <div id="c-num-5">
+                  <h3 >Which two symbols are missing?</h3> 
+                  <h3 class="w3-center w3-margin">
+                      &Omega; # – &Omega; &Omega; # # – <span class="w3-text-red">?</span> &Omega; # – &Omega; &Omega; # # – = # &Omega; # – &Omega; &Omega; # # – <span class="w3-text-red">?</span> &Omega; # – &Omega; &Omega; # # – = # &Omega; # – &Omega; &Omega; # # – <span class="w3-text-red">?</span> &Omega; # – &Omega; &Omega; # # – &Omega; # – &Omega; &Omega; # # – <span class="w3-text-red">?</span> &Omega; # – &Omega; &Omega; # # – = #
+                  </h3>
+                  <ul class="w3-ul w3-xlarge" style="margin: 30px">
+                      <li id="c1" class="w3-hover-sepia">A. &Omega; #</li>
+                      <li id="c2" class="w3-hover-sepia">B. – &Omega; </li>
+                      <li id="c3" class="w3-hover-sepia">C. # #</li>
+                      <li id="c4" class="w3-hover-sepia">D. = #</li>
+                      <li id="c5" class="w3-hover-sepia">E. – =</li>
+                  </ul>
+               </div>
+            </div>
+
+            <div id="q4">
+                <div id="c-num-6">
+                    <h3>Which number is the odd one out?</h3><br />
+                    <ul class="w3-ul w3-wide w3-margin-left w3-margin-right">
+                        <li id="c1" class="w3-margin-right w3-hover-sepia">
+                            <h3>A. 84129</h3>
+                        </li>
+                        <li id="c2" class="w3-margin-right w3-hover-sepia">
+                            <h3>B. 32418</h3>
+                        </li>
+                        <li id="c3" class="w3-margin-right w3-hover-sepia">
+                            <h3>C. 47632</h3>
+                        </li>
+                        <li id="c4" class="w3-margin-right w3-hover-sepia">
+                            <h3>D. 36119</h3>
+                        </li>
+                        <li id="c5" class="w3-margin-right w3-hover-sepia">
+                            <h3>E. 67626</h3>
+                        </li>
+                        <li id="c6" class="w3-margin-right w3-hover-sepia">
+                            <h3>F. 72927</h3>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div id="q5">
+                <h3>
+                    12593 &rarr; 35291<br><br>
+                    29684 &rarr; 46982<br><br>
+                    72936 &rarr; <input type="number" id="ans1" style="width:68px" placeholder="?" class="w3-center"><br><br>
+                    <input type="button" class="w3-button w3-center w3-teal w3-margin-bottom w3-disabled" value="submit" id="submit" />
+                </h3>
+            </div>
+
+            <div id="q6">
+                <div id="c-num-5">
+                    <h3>Complete the equation by correctly identifying the missing part of the calculation from the list
+                        of
+                        options below.</h3><br />
+                    <h1> 99/<span class="w3-text-red">?</span> = 24.75 x 2<sup>4</sup></h1><br />
+                    <ul class="w3-ul w3-margin-left w3-margin-right">
+                        <li id="c1" class="w3-hover-sepia">
+                            <h3><span class="w3-center"></span>0.75</h3>
+                        </li>
+                        <li id="c2" class="w3-hover-sepia">
+                            <h3><span class="w3-center"></span>1.95 – 0.75</h3>
+                        </li>
+                        <li id="c3" class="w3-hover-sepia">
+                            <h3><span class="w3-center"></span>0.5<sup>2</sup></h3>
+                        </li>
+                        <li id="c4" class="w3-hover-sepia">
+                            <h3><span class="w3-center"></span>0.825</h3>
+                        </li>
+                        <li id="c5" class="w3-hover-sepia">
+                            <h3><span class="w3-center"></span>0.35</h3>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div id="q7" >
+                <div id="c-num-5">
+                    <img src="multimedia/img/questions/q-7/tile.PNG">
+                    <h3>Which of these could be the middle tile?</h3>
+                    <img src="multimedia/img/questions/q-7/A.PNG"  id="c1" class="w3-hover-sepia" width=170>
+                    <img src="multimedia/img/questions/q-7/B.PNG" id="c2" class="w3-hover-sepia" width=170>
+                    <img src="multimedia/img/questions/q-7/C.PNG" id="c3" class="w3-hover-sepia" width=170>
+                    <img src="multimedia/img/questions/q-7/D.PNG" id="c4" class="w3-hover-sepia" width=170>
+                    <img src="multimedia/img/questions/q-7/E.PNG" id="c5" class="w3-hover-sepia" width=170>
+                </div>
+            </div>
+
+            <div id="q8">
+                <h3>Insert numbers into the remaining blank squares so that the
+                    sums in each line and column are correct. All numbers to be
+                    inserted are less than 10.
+                </h3><br />
+                <div id="board"></div>
+                <input type="button" class="w3-button w3-center w3-teal w3-disabled w3-margin-bottom w3-margin-top" value="submit"
+                    id="submit" />
+            </div>
+
+            <div id="q9">
+                <h3>
+                    Which two letters come next?<br><br>
+                    A Z B Y D W G T <input class="w3-center" id="ans1" type="text" size="1" maxlength="1" placeholder="?"/> <input class="w3-center" id="ans2" type="text" size="1" maxlength="1" placeholder="?"/><br><br>
+                     <input type="button" class="w3-button w3-center w3-teal w3-margin-bottom w3-disabled" value="submit" id="submit" />
+                </h3>
+            </div>
+
+            <div id="q10">
+                <div id="c-num-5">
+                    <h3>Which set of numbers should replace the question marks?
+                    </h3><br />
+                    <div class="w3-center w3-margin-bottom">
+                        <input type="button" class="q10btn w3-right-btn w3-border w3-button" value="14" /><input
+                            type="button" class="q10btn w3-right-btn w3-border w3-button" value="27" /><input
+                            type="button" class="q10btn w3-right-btn w3-border w3-button" value="56" /><input
+                            type="button" class="q10btn w3-right-btn w3-border w3-button" value="18" /><input
+                            type="button" class="q10btn w3-right-btn w3-border w3-button" value="76" /><input
+                            type="button" class="q10btn w3-right-btn w3-border w3-button" value="32" /><input
+                            type="button" class="q10btn w3-right-btn w3-border w3-button w3-black" /><input
+                            type="button" class="q10btn w3-right-btn w3-border w3-button" value="68" /><input
+                            type="button" class="q10btn w3-right-btn w3-border w3-button" value="64" /><input
+                            type="button" class="q10btn w3-right-btn w3-border w3-button" value="71" /><input
+                            type="button" class="q10btn w3-right-btn w3-border w3-button" value="19" /><input
+                            type="button" class="q10btn w3-right-btn w3-border w3-button" value="25" /><input
+                            type="button" class="q10btn w3-right-btn w3-border w3-button" value="49" /><br />
+                        <input type="button" class="q10btn w3-right-btn w3-border w3-button" value="5" /><input
+                            type="button" class="q10btn w3-right-btn w3-border w3-button" value="9" /><input
+                            type="button" class="q10btn w3-right-btn w3-border w3-button" value="11" /><input
+                            type="button" class="q10btn w3-right-btn w3-border w3-button" value="9" /><input
+                            type="button" class="q10btn w3-right-btn w3-border w3-button" value="13" /><input
+                            type="button" class="q10btn w3-right-btn w3-border w3-button" value="5" /><input
+                            type="button" class="q10btn w3-right-btn w3-border w3-button w3-black" /><input
+                            type="button" class="q10btn w3-right-btn w3-border w3-button" value="?" /><input
+                            type="button" class="q10btn w3-right-btn w3-border w3-button" value="?" /><input
+                            type="button" class="q10btn w3-right-btn w3-border w3-button" value="?" /><input
+                            type="button" class="q10btn w3-right-btn w3-border w3-button" value="?" /><input
+                            type="button" class="q10btn w3-right-btn w3-border w3-button" value="?" /><input
+                            type="button" class="q10btn w3-right-btn w3-border w3-button" value="?" />
+                    </div>
+                    <hr />
+
+                    <ul class="w3-ul w3-margin-left w3-margin-right w3-margin-top">
+                        <div id="c1" class="w3-margin-bottom w3-hover-sepia">
+                            A. <input type="button" class="c10btn w3-right-btn w3-border w3-button w3-hover-none"
+                                value="14" /><input type="button"
+                                class="c10btn w3-right-btn w3-border w3-button w3-hover-none" value="4" /><input
+                                type="button" class="c10btn w3-right-btn w3-border w3-button w3-hover-none"
+                                value="8" /><input type="button"
+                                class="c10btn w3-right-btn w3-border w3-button w3-hover-none" value="8" /><input
+                                type="button" class="c10btn w3-right-btn w3-border w3-button w3-hover-none"
+                                value="5" /><input type="button"
+                                class="c10btn w3-right-btn w3-border w3-button w3-hover-none" value="7" />
+                        </div>
+                        <div id="c2" class="w3-margin-bottom w3-hover-sepia">
+                            B. <input type="button" class="c10btn w3-right-btn w3-border w3-button w3-hover-none"
+                                value="16" /><input type="button"
+                                class="c10btn w3-right-btn w3-border w3-button w3-hover-none" value="9" /><input
+                                type="button" class="c10btn w3-right-btn w3-border w3-button w3-hover-none"
+                                value="4" /><input type="button"
+                                class="c10btn w3-right-btn w3-border w3-button w3-hover-none" value="10" /><input
+                                type="button" class="c10btn w3-right-btn w3-border w3-button w3-hover-none"
+                                value="3" /><input type="button"
+                                class="c10btn w3-right-btn w3-border w3-button w3-hover-none" value="13" />
+                        </div>
+                        <div id="c3" class="w3-margin-bottom w3-hover-sepia">
+                            C. <input type="button" class="c10btn w3-right-btn w3-border w3-button w3-hover-none"
+                                value="12" /><input type="button"
+                                class="c10btn w3-right-btn w3-border w3-button w3-hover-none" value="9" /><input
+                                type="button" class="c10btn w3-right-btn w3-border w3-button w3-hover-none"
+                                value="4" /><input type="button"
+                                class="c10btn w3-right-btn w3-border w3-button w3-hover-none" value="18" /><input
+                                type="button" class="c10btn w3-right-btn w3-border w3-button w3-hover-none"
+                                value="6" /><input type="button"
+                                class="c10btn w3-right-btn w3-border w3-button w3-hover-none" value="19" />
+                        </div>
+                        <div id="c4" class="w3-margin-bottom w3-hover-sepia">
+                            D. <input type="button" class="c10btn w3-right-btn w3-border w3-button w3-hover-none"
+                                value="12" /><input type="button"
+                                class="c10btn w3-right-btn w3-border w3-button w3-hover-none" value="10" /><input
+                                type="button" class="c10btn w3-right-btn w3-border w3-button w3-hover-none"
+                                value="9" /><input type="button"
+                                class="c10btn w3-right-btn w3-border w3-button w3-hover-none" value="8" /><input
+                                type="button" class="c10btn w3-right-btn w3-border w3-button w3-hover-none"
+                                value="5" /><input type="button"
+                                class="c10btn w3-right-btn w3-border w3-button w3-hover-none" value="7" />
+                        </div>
+                        <div id="c5" class="w3-margin-bottom w3-hover-sepia">
+                            E. <input type="button" class="c10btn w3-right-btn w3-border w3-button w3-hover-none"
+                                value="14" /><input type="button"
+                                class="c10btn w3-right-btn w3-border w3-button w3-hover-none" value="10" /><input
+                                type="button" class="c10btn w3-right-btn w3-border w3-button w3-hover-none"
+                                value="8" /><input type="button"
+                                class="c10btn w3-right-btn w3-border w3-button w3-hover-none" value="10" /><input
+                                type="button" class="c10btn w3-right-btn w3-border w3-button w3-hover-none"
+                                value="7" /><input type="button"
+                                class="c10btn w3-right-btn w3-border w3-button w3-hover-none" value="13" />
+                        </div>
+                    </ul>
+                </div>
+            </div>
+
+            <div id="q11">
+                <h3>
+                    <img src="multimedia/img/questions/q-11/box.jpg" width=100> &rarr; <img src="multimedia/img/questions/q-11/shoe2.jpg" width=100> x 28<br><br>
+                    <img src="multimedia/img/questions/q-11/box.jpg" width=100> x <input type="number" class="w3-center" id="ans1" size="1" maxlength="5" placeholder="?"/> &rarr; <img src="multimedia/img/questions/q-11/shoe.jpg" width=100> x 112<br><br>
+                     <input type="button" class="w3-button w3-center w3-teal w3-margin-bottom w3-disabled" value="submit" id="submit" />
+                </h3>
+            </div>
+
+            <div id="q12">
+                <div id="c-num-5">
+                    <h3>Which is the odd one out?</h3><br />
+                    <hr />
+                    <div id="c1" class="w3-margin-bottom w3-hover-sepia">
+                        A. <img src="multimedia/img/questions/q-12/c1.PNG" width="300" />
+                    </div>
+                    <div id="c2" class="w3-margin-bottom w3-hover-sepia">
+                        B. <img src="multimedia/img/questions/q-12/c2.PNG" width="300" />
+                    </div>
+                    <div id="c3" class="w3-margin-bottom w3-hover-sepia">
+                        C. <img src="multimedia/img/questions/q-12/c3.PNG" width="300" />
+                    </div>
+                    <div id="c4" class="w3-margin-bottom w3-hover-sepia">
+                        D. <img src="multimedia/img/questions/q-12/c4.PNG" width="300" />
+                    </div>
+                    <div id="c5" class="w3-margin-bottom w3-hover-sepia">
+                        E. <img src="multimedia/img/questions/q-12/c5.PNG" width="300" />
+                    </div>
+                </div>
+            </div>
+
+            <div id="q13" >
+                <div id="c-num-5">
+                    <h3  class="w3-left-align w3-margin" >
+                        Which two numbers in the numerical sequences should swap places?<br><br><span>2, 2.5, 4.5, 6.75</span><br><span>1, 3, 6.25, 15.625</span>
+                    </h3>
+                    <ul class="w3-ul" style="font-size: 22px; margin: 30px">
+                      <li id="c1" class="w3-hover-sepia">4.5, 6.25</li>
+                      <li id="c2" class="w3-hover-sepia">2.5, 3</li>
+                      <li id="c3" class="w3-hover-sepia">2, 1</li>
+                      <li id="c4" class="w3-hover-sepia">6.75, 15.625</li>
+                      <li id="c5" class="w3-hover-sepia">none</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div id="q14">
+                <div id="c-num-5">
+                    <h3>Which two squares are missing?</h3><br />
+                    <img src="multimedia/img/questions/q-14/question.PNG" width="300" />
+                    <br /><br />
+                    <hr />
+                    <div id="choices" class="w3-margin-bottom">
+                        <img id="c1" class="w3-hover-sepia" src="multimedia/img/questions/q-14/c1.PNG" />
+                        <img id="c2" class="w3-hover-sepia" src="multimedia/img/questions/q-14/c2.PNG" />
+                        <img id="c3" class="w3-hover-sepia" src="multimedia/img/questions/q-14/c3.PNG" />
+                        <img id="c4" class="w3-hover-sepia" src="multimedia/img/questions/q-14/c4.PNG" />
+                        <img id="c5" class="w3-hover-sepia" src="multimedia/img/questions/q-14/c5.PNG" />
+                    </div>
+                </div>
+            </div>
+
+            <div id="q15">
+                <div id="c-num-5">
+                    <h3><span class="w3-text-red">?</span> + (350 × 0.84) = (620 × 0.55) – &radic;(1762)/2</h3>
+                    <h3 class="w3-left-align w3-margin"> 
+                        Which option satisfies the equation given above?<br><br>
+                    </h3>
+                    <ul class="w3-ul" style="font-size: 21px; margin: 30px">
+                      <li id="c1" class="w3-hover-sepia">A. 13.5 x 2</li>
+                      <li id="c2" class="w3-hover-sepia">B. 234/9 + 1</li>
+                      <li id="c3" class="w3-hover-sepia">C. 3&sup3; + 1</li>
+                      <li id="c4" class="w3-hover-sepia">D. (120 x 65%)/3</li>
+                      <li id="c5" class="w3-hover-sepia">E. 61/17 x 2&sup2;</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div id="q16">
+                <div id="c-num-5">
+                    <h3>Which is the odd one out?</h3><br />
+                    <hr />
+                    <div id="choices" class="w3-margin-bottom">
+                        <img id="c1" class="w3-hover-sepia" src="multimedia/img/questions/q-16/c1.PNG" />
+                        <img id="c2" class="w3-hover-sepia" src="multimedia/img/questions/q-16/c2.PNG" />
+                        <img id="c3" class="w3-hover-sepia" src="multimedia/img/questions/q-16/c3.PNG" />
+                        <img id="c4" class="w3-hover-sepia" src="multimedia/img/questions/q-16/c4.PNG" />
+                        <img id="c5" class="w3-hover-sepia" src="multimedia/img/questions/q-16/c5.PNG" />
+                    </div>
+                </div>
+            </div>
+
+            <div id="q17" class="w3-left-align w3-margin">
+                <h3>
+                    An electrical circuit wiring a set of four lights depends on a
+                    system of switches A, B, C and D. Each switch when working
+                    has the following effect on the lights:<br>
+                    Switch A turns lights 1 and 2 on/off or off/on<br>
+                    Switch B turns lights 2 and 4 on/off or off/on<br>
+                    Switch C turns lights 1 and 3 on/off or off/on<br>
+                    Switch D turns lights 3 and 4 on/off or off/on<br>
+                </h3>
+                <img src="multimedia/img/questions/q-17/on.PNG"><span>= ON</span>
+                <img src="multimedia/img/questions/q-17/off.PNG"><span>= OFF</span>
+                <h3>
+                    In the following, switches C B D A are thrown in turn, with
+                    the result that Figure 1 is transformed into Figure 2. One of
+                    the switches is therefore not working and has had no effect
+                    on the numbered lights.<br>
+                    Identify which one of the switches is not working?<br>
+                </h3>
+                <img src="multimedia/img/questions/q-17/switches.PNG">
+                <h3 class="w3-center">Answer: <input class="w3-border w3-center" id="ans1" type="text" size="1" maxlength="1"     placeholder="?"/><br><br>
+                    <input type="button" class="w3-button w3-center w3-teal w3-margin-bottom w3-disabled" value="submit" id="submit" />
+                </h3>
+                
+            </div>
+
+            <div id="q18" class="w3-margin-right w3-margin-left">
+                <div class="w3-center w3-margin">
+                    <img src="multimedia/img/apple.png" width="20" /><img src="multimedia/img/apple.png"
+                        width="20" /><img src="multimedia/img/apple.png" width="20" /><img
+                        src="multimedia/img/apple.png" width="20" /> +
+                    <img src="multimedia/img/pineapple.png" width="20" /><img src="multimedia/img/pineapple.png"
+                        width="20" /><img src="multimedia/img/pineapple.png" width="20" /><img
+                        src="multimedia/img/pineapple.png" width="20" /><img src="multimedia/img/pineapple.png"
+                        width="20" /><img src="multimedia/img/pineapple.png" width="20" /> = NKF156
+                </div>
+                <div class="w3-center">
+                    <img src="multimedia/img/apple.png" width="20" /><img src="multimedia/img/apple.png"
+                        width="20" /><img src="multimedia/img/apple.png" width="20" /> +
+                    <img src="multimedia/img/pineapple.png" width="20" /><img src="multimedia/img/pineapple.png"
+                        width="20" /><img src="multimedia/img/pineapple.png" width="20" /><img
+                        src="multimedia/img/pineapple.png" width="20" /><img src="multimedia/img/pineapple.png"
+                        width="20" /><img src="multimedia/img/pineapple.png" width="20" /><img
+                        src="multimedia/img/pineapple.png" width="20" /> = NKF152
+                    <br />
+                    <hr />
+                    <div class="w3-center w3-margin-bottom">
+                        <img src="multimedia/img/apple.png" width="40" /> &rarr; <input type="number" class="w3-center" id="ans1"
+                            style="width:40px" />
+                    </div>
+                    <div class="w3-center w3-margin-bottom">
+                        <img src="multimedia/img/pineapple.png" width="40" /> &rarr; <input type="number" class="w3-center" id="ans2"
+                            style="width:40px" />
+                    </div>
+                    <div class="w3-center w3-margin">
+                        <input type="button" id="submit" class="w3-button w3-teal w3-disabled" value="Submit" />
+                    </div>
+                </div>
+            </div>
+
+            <div id="q19" class="w3-margin-right w3-margin-left">
+                <div id="c-num-4">
+                    <h3>Which is the missing section?</h3><br />
+                    <img src="multimedia/img/questions/q-20/question.PNG" width="300" />
+                    <hr />
+                    <img id="c1" class="w3-margin-bottom w3-hover-sepia" src="multimedia/img/questions/q-20/c1.PNG"
+                        width="150" />
+                    <img id="c2" class="w3-margin-bottom w3-hover-sepia" src="multimedia/img/questions/q-20/c2.PNG"
+                        width="150" />
+                    <img id="c3" class="w3-margin-bottom w3-hover-sepia" src="multimedia/img/questions/q-20/c3.PNG"
+                        width="150" />
+                    <img id="c4" class="w3-margin-bottom w3-hover-sepia" src="multimedia/img/questions/q-20/c4.PNG"
+                        width="150" />
+                </div>
+            </div>
+
+            <div id="q20" class="w3-margin-right w3-margin-left">
+                <div id="c-num-5">
+                    <h3>If you had only one <span id="c1">match</span> and entered a dark room in a chilly day
+                        containing oil lamp,
+                        some kindling wood, a smoking pipe, and a newspaper, which one would you light first?</h3><br />
+                    <hr />
+                    <ul class="w3-ul w3-wide w3-margin-left w3-margin-right">
+                        <li id="c2" class="w3-margin-right w3-hover-sepia">
+                            <h3>A. The oil lamp</h3>
+                        </li>
+                        <li id="c3" class="w3-margin-right w3-hover-sepia">
+                            <h3>B. The kindling wood</h3>
+                        </li>
+                        <li id="c4" class="w3-margin-right w3-hover-sepia">
+                            <h3>C. The newspaper</h3>
+                        </li>
+                        <li id="c5" class="w3-margin-right w3-hover-sepia">
+                            <h3>D. The smoking pipe</h3>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="w3-bottom w3-margin-right w3-margin-left" id="footer">
+            <div class="w3-bar w3-white w3-left-align w3-large w3-center">
+                <button class="w3-button w3-sand w3-border w3-margin-bottom w3-margin-top w3-circle" id="hint-btn">
+                    <img src="multimedia/img/lightbulb.png" /> <span id="hint-txt"></span>
+                </button>
+                <button class="w3-button w3-sand w3-border w3-margin-bottom w3-margin-top w3-circle" id="add-live-btn">
+                    <img src="multimedia/img/heart-alive.png" width="20" height="20" /> <span id="add-lives-txt"></span>
+                </button>
+                <button class="w3-button w3-sand w3-border w3-margin-bottom w3-margin-top w3-circle" id="next-btn">
+                    <img src="multimedia/img/rightarrow.png" width="20" height="20" /> <span id="next-txt"></span>
+                </button>
+            </div>
+        </div>
+
+        <!-- All the modals -->
+
+        <!-- If the user is wrong -->
+        <div id="wrong-modal" class="w3-animate-zoom">
+            <p class="w3-text-red" id="cross">X</p>
+        </div>
+
+        <!-- If the user is right -->
+        <div class="w3-center w3-modal w3-margin-top" id="message">
+            <div class="w3-modal-content w3-animate-zoom">
+                <h2 class="w3-wide w3-center w3-margin-top w3-text-teal"><b>EXCELLENT!!</b> <img
+                        src="multimedia/img/smile.gif" /> </h2>
+                <hr />
+                <div class="w3-center">
+                    <img src="multimedia/img/ic_coins_l.png" /> <span class="w3-text-red w3-xlarge"> &plus; 18 </span>
+                </div>
+                <div class="w3-padding-100">
+                    <h3 id="hint-answered"> </h3>
+                </div>
+                <div id="continue">
+                    <input type="button" class="w3-button w3-sand w3-margin-bottom w3-border w3-circle" value="CONTINUE"
+                        id="continue-btn" />
+                </div>
+            </div>
+        </div>
+
+        <!-- If the user reached 0 lives -->
+        <div class="w3-center w3-modal w3-margin-top" id="0-lives">
+            <div class="w3-modal-content w3-animate-zoom">
+                <h2 class="w3-wide w3-center w3-margin-top w3-text-red"><b>Sorry!!</b></h2>
+                <hr />
+                <div class="w3-center">
+                    <img src="multimedia/img/392103840_SAD_EMOJI_WITH_TEAR_400px.gif" width="200" />
+                </div>
+                <div class="w3-margin-bottom">
+                    <h4> We've got to take you back to level <div id="0-lives-level"></div>
+                    </h4>
+                </div>
+                <div id="continue">
+                    <input type="button" class="w3-button w3-sand w3-margin-bottom w3-border w3-circle" value="OK"
+                        id="0-lives-btn" />
+                </div>
+            </div>
+        </div>
+
+        <!-- If the user is has finished the game -->
+        <div class="w3-center w3-modal w3-margin-top" id="game-finished">
+            <div class="w3-modal-content w3-animate-zoom">
+                <h2 class="w3-wide w3-center w3-margin-top w3-text-teal"><b>EXCELLENT!!</b></h2>
+                <hr />
+                <div class="w3-center">
+                    <img src="multimedia/img/432008670_CLAPPING_HANDS_3D_LIGHT_SKIN_TONE_400px.gif" width="300" />
+                </div>
+                <div class="w3-margin-bottom">
+                    <h4> You finished this game!!! Your score is <span id="final-score"></span> </h4>
+                </div>
+                <div id="continue">
+                    <input type="button" class="w3-button w3-sand w3-margin-bottom w3-border w3-circle" value="FINISH"
+                        id="finish-btn" />
+                </div>
+            </div>
+        </div>
+
+        <!-- Hint modal -->
+        <div id="hint-modal" class="w3-modal">
+            <div class="w3-modal-content w3-animate-zoom">
+                <div class="w3-container w3-white w3-center">
+                    <a onclick="document.getElementById('hint-modal').style.display='none'"
+                        class="w3-display-topright w3-button w3-hover-red w3-hover-text-white w3-text-red w3-large">X</a>
+                    <h2 class="w3-wide w3-text-pink">Hint</h2>
+                    <hr />
+                    <div class="w3-padding-64">
+                        <h3 id="hint"></h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

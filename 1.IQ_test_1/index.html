@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../w3/w3.css" />
+    <link rel="stylesheet" href="css/index.css" />
+    <script src="../../jQuery/jquery-3.5.1.js"></script>
+    <script src="js/index.js"></script>
+</head>
+
+<body class="w3-light-gray">
+
+    <div>
+        <h1 id="logo" class="w3-center w3-wide w3-padding-64 w3-animate-top">IQ Test 1</h1>
+    </div>
+    <div id="body" class="w3-center w3-padding-64 w3-animate-zoom">
+        <div id="play">
+            <a class="w3-wide w3-button w3-border w3-xlarge w3-margin-bottom w3-ripple" id="play-btn"
+                href="game.html">PLAY</a>
+        </div>
+        <a type="button" class="w3-wide w3-button w3-border w3-xlarge w3-margin-bottom" href="my_score.html" id="my-score-btn">My
+            Score</a><br />
+        <a class="w3-wide w3-button w3-border w3-xlarge w3-margin-bottom" id="about-btn" href="about.html">About</a>
+    </div>
+
+    <div id="footer" class="w3-bar w3-bottom w3-black w3-opacity w3-padding-16">
+        <h6 class="w3-center">&copy; Blue Genisys 2022</h6>
+    </div>
+
+    <!-- If the user is has finished the game -->
+    <div class="w3-center w3-modal w3-margin-top" id="game-finished">
+        <div class="w3-modal-content w3-animate-zoom">
+            <h2 class="w3-wide w3-center w3-margin-top w3-text-teal"><b>You're done!!</b></h2>
+            <hr />
+            <div class="w3-center">
+                <img src="multimedia/img/432008670_CLAPPING_HANDS_3D_LIGHT_SKIN_TONE_400px.gif" width="200" />
+            </div>
+            <div class="w3-margin-bottom">
+                <h4>You finished this test!!! Wait for our next release or reset to play over again.</h4>
+            </div>
+            <input type="button" class="w3-button w3-sand w3-margin-bottom w3-border w3-circle" value="OK" id="ok-btn"
+                style="width:60px" />
+        </div>
+    </div>
+
+</body>
+
+</html>
